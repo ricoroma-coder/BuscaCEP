@@ -28,18 +28,23 @@ Para acesso local, algumas ferramentas são necessárias:
 	> https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos
 
 - Abra o terminal de comando na pasta do projeto e execute:
-	composer install
-	composer dump-autoload
+	<blockquote>
+		composer install
+		composer dump-autoload
+	</blockquote>
 
 - Configure o arquivo .env com os dados de sua base de dados:
-	$DBDRIVER="{DBDRIVER}";
-	$DBHOST="{DBHOST}";
-	$DBNAME="{DBNAME}";
-	$DBUSER="{DBUSER}";
-	$DBPASS="{DBPASS}";
-	$DBPORT="{DBPORT}";
+	<blockquote>
+		$DBDRIVER="{DBDRIVER}";
+		$DBHOST="{DBHOST}";
+		$DBNAME="{DBNAME}";
+		$DBUSER="{DBUSER}";
+		$DBPASS="{DBPASS}";
+		$DBPORT="{DBPORT}";
+	</blockquote>
 
 	- Exemplo:
+	
 		$DBDRIVER="mysql";
 		$DBHOST="localhost";
 		$DBNAME="buscacep";
