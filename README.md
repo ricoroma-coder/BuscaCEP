@@ -65,23 +65,23 @@ Para acesso local, algumas ferramentas são necessárias:
 	- Abra o arquivo route-list.php em "routes/route-list.php":
 	- Registre uma nova rota como mostrado no arquivo;
 	- Para acessar essa nova rota no navegador localmente, configure a url para:
-		> localhost/standard-eloquent-project/categorias
+		<blockquote>localhost/standard-eloquent-project/categorias</blockquote>
 	- Para acessar essa nova rota no navegador remotamente, configure a url para:
-		> www.domain.com/categorias
+		<blockquote>www.domain.com/categorias</blockquote>
 
 <h2><b>Migrações</b></h2>: Para criar uma nova migração, abra o terminal na pasta principal do projeto e rode o comando:
-	> vendor\bin\phinx create MyFirstMigration
+	<blockquote>vendor\bin\phinx create MyFirstMigration</blockquote>
 - Para migrar as tabelas para o banco de dados, rode o comando:
-	> vendor\bin\phinx migrate
+	<blockquote>vendor\bin\phinx migrate</blockquote>
 - Para dar um rollback, rode o comando:
-	> vendor\bin\phinx rollback
+	<blockquote>vendor\bin\phinx rollback</blockquote>
 
 <h2><b>Seeders</b></h2>: Para criar um novo Seeder, abra o terminal na pasta principal do projeto e rode o comando:
-	> vendor\bin\phinx seed:create MyFirstSeeder
+	<blockquote>vendor\bin\phinx seed:create MyFirstSeeder</blockquote>
 - Para rodar um Seeder, use o comando:
-	> vendor\bin\phinx seed:run
+	<blockquote>vendor\bin\phinx seed:run</blockquote>
 - Para rodas um Seeder específico, use o comando:
-	> vendor\bin\phinx seed:run -s MyFirstSeeder -s MySecondSeeder
+	<blockquote>vendor\bin\phinx seed:run -s MyFirstSeeder -s MySecondSeeder</blockquote>
 
 ## Instructions
 - Local access requires some tools:
@@ -132,20 +132,23 @@ Para acesso local, algumas ferramentas são necessárias:
 	- Open the file route-list.php at "routes/route-list.php":
 	- Add a new route following the example in the file;
 	- To reach this page at navigator locally, set url to:
-		> localhost/standard-eloquent-project/categories
+		<blockquote>localhost/standard-eloquent-project/categories</blockquote>
 	- To reach this page at navigator remotely, set url to:
-		> www.domain.com/categories
+		<blockquote>www.domain.com/categories</blockquote>
 
-<h2><b>Migrations</b></h2>: To create a new migration, open the terminal at root directory and run:
-	> vendor\bin\phinx create MyFirstMigration
+<h2><b>Migrations</b></h2>
+To create a new migration, open the terminal at root directory and run:
+	<blockquote>vendor\bin\phinx create MyFirstMigration</blockquote>
 - Execute migrate by running the command:
-	> vendor\bin\phinx migrate
+	<blockquote>vendor\bin\phinx migrate</blockquote>
 - Execute rollback by running the command:
-	> vendor\bin\phinx rollback
+	<blockquote>vendor\bin\phinx rollback</blockquote>
 
-<h2><b>Seeders</b></h2>: To create a new seeder, open the terminal at root directory and run:
-	> vendor\bin\phinx seed:create MyFirstSeeder
+<h2><b>Seeders</b></h2>
+To create a new seeder, open the terminal at root directory and run:
+	<blockquote>vendor\bin\phinx seed:create MyFirstSeeder</blockquote>
 - Execute migrate by running the command:
-	> vendor\bin\phinx seed:run
+	<blockquote>vendor\bin\phinx seed:run</blockquote>
+	
 - Execute a specific migrate by running the command:
-	> vendor\bin\phinx seed:run -s MyFirstSeeder -s MySecondSeeder
+	<blockquote>vendor\bin\phinx seed:run -s MyFirstSeeder -s MySecondSeeder</blockquote>
