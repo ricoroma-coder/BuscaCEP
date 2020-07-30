@@ -1,5 +1,5 @@
-## BuscaCEP
-# Linguagens:
+# BuscaCEP
+## Linguagens:
 - HTML5;
 - PHP5;
 - CSS3;
@@ -7,7 +7,7 @@
 - MySQL;
 - Apache;
 
-# Frameworks:
+## Frameworks:
 - Standand Eloquent Project v5.1.4;
 - Bootstrap v4.0.0;
 - jQuery;
@@ -16,10 +16,10 @@
 - XAMPP;
 - Composer;
 
-# Instruções
+## Instruções
 - Para acesso local, algumas ferramentas são necessárias:
 	- Se não possuir alguma ferramenta de acesso ao servidor Apache local, instale o XAMPP através do link:
-		https://www.apachefriends.org/pt_br/download.html
+		-https://www.apachefriends.org/pt_br/download.html
 - WINDOWS => Instale o Composer através do link:
 	https://getcomposer.org/Composer-Setup.exe
 - LINUX/MACOS => Siga as instruções em:
@@ -49,7 +49,7 @@
 	vendor\bin\phinx migrate
 	vendor\bin\phinx seed:run
 
-# Funcionalidades:
+## Funcionalidades:
 
 - Rotas: Para registrar uma nova rota:
 	- Abra o arquivo route-list.php em "routes/route-list.php":
@@ -73,7 +73,7 @@
 - Para rodas um Seeder específico, use o comando:
 	vendor\bin\phinx seed:run -s MyFirstSeeder -s MySecondSeeder
 
-# Instructions
+## Instructions
 - Local access requires some tools:
 	- If you don't have any Apache tool, install XAMPP at the following link:
 		https://www.apachefriends.org/pt_br/download.html
@@ -105,7 +105,7 @@
 	vendor\bin\phinx migrate
 	vendor\bin\phinx seed:run
 
-# Engine
+## Engine
 
 - Routes:To register a new route:
 	- Open the file route-list.php at "routes/route-list.php":
