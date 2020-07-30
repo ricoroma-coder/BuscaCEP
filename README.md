@@ -1,29 +1,31 @@
 # BuscaCEP
 ## Linguagens:
-- HTML5;
-- PHP5;
-- CSS3;
-- JavaScript;
-- MySQL;
-- Apache;
+- HTML5
+- PHP5
+- CSS3
+- JavaScript
+- MySQL
+- Apache
 
 ## Frameworks:
-- Standand Eloquent Project v5.1.4;
-- Bootstrap v4.0.0;
-- jQuery;
+- Standand Eloquent Project v5.1.4
+- Bootstrap v4.0.0
+- jQuery
 
-- Ferramentas
-- XAMPP;
-- Composer;
+## Ferramentas
+- XAMPP
+- Composer
 
 ## Instruções
-- Para acesso local, algumas ferramentas são necessárias:
-	- Se não possuir alguma ferramenta de acesso ao servidor Apache local, instale o XAMPP através do link:
-		-https://www.apachefriends.org/pt_br/download.html
-- WINDOWS => Instale o Composer através do link:
-	https://getcomposer.org/Composer-Setup.exe
-- LINUX/MACOS => Siga as instruções em:
-	https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos
+Para acesso local, algumas ferramentas são necessárias:
+- Se não possuir alguma ferramenta de acesso ao servidor Apache local, instale o XAMPP através do link:
+	> https://www.apachefriends.org/pt_br/download.html
+- WINDOWS
+	Instale o Composer através do link:
+	> https://getcomposer.org/Composer-Setup.exe
+- LINUX/MACOS
+	Siga as instruções em:
+	> https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos
 
 - Abra o terminal de comando na pasta do projeto e execute:
 	composer install
