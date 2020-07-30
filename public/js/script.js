@@ -1,41 +1,22 @@
-$('.collapse-button').click(function () {
-	var t = $(this),
-	target = t.attr('target'),
-	targetForm = t.siblings('[collapse="'+target+'"]');
+document.getElementById('collapse-button').addEventListener('click', function () {
+	var t = this,
+	target = t.getAttribute('target'),
+	targetForm = document.getElementsByClassName(target)[0];
 
-	if (t.hasClass('open')) {
-		t.removeClass('open');
-		t.addClass('close');
-		if (targetForm.hasClass('open')) {
-			targetForm.removeClass('open');
-			targetForm.addClass('close');
+	if (t.getAttribute('class').indexOf('open') > -1) {
+		t.classList.remove('open');
+		t.classList.add('close');
+		if (targetForm.getAttribute('class').indexOf('open') > -1) {
+			targetForm.classList.remove('open');
+			targetForm.classList.add('close');
 		}
 	}
 	else {
-		t.removeClass('close');
-		t.addClass('open');
-		if (targetForm.hasClass('close')) {
-			targetForm.removeClass('close');
-			targetForm.addClass('open');
-		}
-	}
-});
-
-$('.selector, .selector *, .selector > *').click(function () {
-	var t = $(this);
-	if (!t.hasClass('selector'))
-		t = t.parents('.selector');
-	var target = t.attr('target'),
-	elementTarget = $(target);
-
-	if (!t.hasClass('active')) {
-		t.siblings('.selector').removeClass('active');
-		t.addClass('active');
-		if (elementTarget.hasClass('out-data')) {
-			elementTarget.removeClass('out-data');
-			elementTarget.siblings('.in-data').addClass('out-data');
-			elementTarget.siblings('.in-data').removeClass('in-data');
-			elementTarget.addClass('in-data');
+		t.classList.remove('close');
+		t.classList.add('open');
+		if (targetForm.getAttribute('class').indexOf('close') > -1) {
+			targetForm.classList.remove('close');
+			targetForm.classList.add('open');
 		}
 	}
 });

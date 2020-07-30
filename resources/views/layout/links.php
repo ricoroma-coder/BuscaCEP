@@ -10,9 +10,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo asset('css/main.css'); ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo asset('css/fonts.css'); ?>">
 
-<!-- favicon -->
-<!-- <link rel="shortcut icon" href="#" type="image/x-icon"> -->
-
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page file via file:// -->

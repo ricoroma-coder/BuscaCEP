@@ -11,7 +11,16 @@ class ViewController extends Controller {
     	$this->view('index', $data);
     }
 
-    public function search() {
+    public function endereco($data = []) {
+    	$this->view('endereco', $data);
+    }
+
+    public function buscarCep() {
+    	$post = $_POST;
+    	echo $post;
+    }
+
+    public function buscarEndereco() {
     	$post = $_POST;
     	echo $post;
     }

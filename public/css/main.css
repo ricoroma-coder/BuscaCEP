@@ -27,15 +27,7 @@
 	                                rgba(255,237,0,1) 89%);
 	}
 
-	.in-data {
-		display: block;
-	}
-
-	.out-data {
-		display: none;
-	}
-
-	.collapse-button {
+	#collapse-button {
 		background-image: url('../images/system-images/icons/arrow.png');
 		background-size: contain;
 		z-index: 10;
@@ -43,14 +35,14 @@
 		margin-top: 5px;
 	}
 
-	.collapse-button.open {
+	#collapse-button.open {
 		transform: rotate(180deg);
 		transition: transform 1s;
 		-webkit-transition: transform 1s;
 		-moz-transition: transform 1s;
 	}
 
-	.collapse-button.close {
+	#collapse-button.close {
 		transform: rotate(0deg);
 		transition: transform 1s;
 		-webkit-transition: transform 1s;

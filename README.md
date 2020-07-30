@@ -1,7 +1,7 @@
 # BuscaCEP
 ## Linguagens:
 - HTML5
-- PHP5
+- PHP7
 - CSS3
 - JavaScript
 - MySQL
@@ -10,7 +10,6 @@
 ## Frameworks:
 - Standand Eloquent Project v5.1.4
 - Bootstrap v4.0.0
-- jQuery
 
 ## Ferramentas
 - XAMPP

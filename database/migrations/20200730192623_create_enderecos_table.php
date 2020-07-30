@@ -22,14 +22,15 @@ final class CreateEnderecosTable extends AbstractMigration
             ->addColumn('logradouro', 'string', [
                 'null' => false
             ])
-            ->addColumn('numero', 'integer', [
+            ->addColumn('complemento', 'string')
+            ->addColumn('unidade', 'integer', [
                 'null' => false,
                 'default' => 0
             ])
             ->addColumn('bairro', 'string', [
                 'null' => false
             ])
-            ->addColumn('cidade', 'string', [
+            ->addColumn('localidade', 'string', [
                 'null' => false
             ])
             ->addColumn('uf', 'string', [
@@ -44,6 +45,8 @@ final class CreateEnderecosTable extends AbstractMigration
             ->addColumn('longitude', 'integer', [
                 'default' => null
             ])
+            ->addColumn('ibge', 'integer')
+            ->addColumn('gia', 'integer')
             ->addColumn('created_at', 'datetime',[
                 'default' => 'CURRENT_TIMESTAMP'
             ])
