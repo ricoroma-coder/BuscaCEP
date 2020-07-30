@@ -54,10 +54,14 @@ Para acesso local, algumas ferramentas são necessárias:
 	</blockquote>
 
 - Para testar o código, abra o terminal na pasta principal do arquivo e rode os seguintes comandos:
+<p><b>OBS: </b>
+Não se esqueça de iniciar o seu servidor apache e o acesso ao banco de dados antes de rodar esses comandos</p>
 	<blockquote>
 		vendor\bin\phinx migrate<br>
-		vendor\bin\phinx seed:run
+		php -S localhost:8000 -t public<br>
 	</blockquote>
+- E então, abra o navegador na url:
+	<blockquote>localhost:8000</blockquote>
 
 ## Funcionalidades:
 
@@ -131,10 +135,14 @@ Para acesso local, algumas ferramentas são necessárias:
 		
 
 - To test the project, open the terminal at root directory and run the following codes:
+<p><b>PS: </b>
+Don't forget to start your apache server and access to database before run these commands:</p>
 	<blockquote>
 		vendor\bin\phinx migrate<br>
-		vendor\bin\phinx seed:run
+		php -S localhost:8000 -t public<br>
 	</blockquote>
+- And then, open the navigator at:
+	<blockquote>localhost:8000</blockquote>
 	
 
 ## Engine

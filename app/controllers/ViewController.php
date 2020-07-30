@@ -11,7 +11,7 @@ class ViewController extends Controller {
     	$this->view('index', $data);
     }
 
-    public function search($data = []) {
+    public function search() {
     	$post = $_POST;
     	echo $post;
     }

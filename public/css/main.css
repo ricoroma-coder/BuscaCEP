@@ -1,13 +1,83 @@
 /* ==== General ==== */
 
+	html {
+		min-height: 100%;
+		height: 100vh;
+	}
+	
 	html,
 	body {
 		width: 100%;
-		height: 100%;
 	}
 
 	body {
+		height: 100%;
 		position: relative;
+	}
+
+	.selector {
+		cursor: pointer;
+	}
+
+	.selector.active {
+		background: rgb(249,182,105);
+    	background: linear-gradient(241deg, rgba(249,182,105,1) 0%, 
+	                                rgba(246,207,35,1) 18%, 
+	                                rgba(242,255,93,1) 55%, 
+	                                rgba(255,237,0,1) 89%);
+	}
+
+	.in-data {
+		display: block;
+	}
+
+	.out-data {
+		display: none;
+	}
+
+	.collapse-button {
+		background-image: url('../images/system-images/icons/arrow.png');
+		background-size: contain;
+		z-index: 10;
+		cursor: pointer;
+		margin-top: 5px;
+	}
+
+	.collapse-button.open {
+		transform: rotate(180deg);
+		transition: transform 1s;
+		-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+	}
+
+	.collapse-button.close {
+		transform: rotate(0deg);
+		transition: transform 1s;
+		-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+	}
+
+	[collapse].open {
+		height: auto;
+		transition: height 1s;
+		-webkit-transition: height 1s;
+		-moz-transition: height 1s;
+		overflow: hidden;
+	}
+
+	[collapse].open {
+		display: block;
+	}
+
+	[collapse].close {
+		height: 0px;
+		transition: height 1s;
+		-webkit-transition: height 1s;
+		-moz-transition: height 1s;
+	}
+
+	[collapse].close {
+		display: none;
 	}
 
 /* ==== end General ==== */
@@ -18,6 +88,7 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
+		z-index: -1;
 	}
 
 /* ==== end Background ==== */
@@ -27,7 +98,8 @@
 	#content {
 		position: relative;
 		width: 100%;
-		height: 100%;
+		height: auto;
+		min-height: 100%;
 		display: flex;
 		flex-direction: column;
 	}
@@ -50,5 +122,13 @@
 		}
 
 	/* ==== end #menuNavbar ==== */
+
+	/* ==== #footer ==== */
+
+		#footer {
+			height: 150px;
+		}
+
+	/* ==== end #footer ==== */
 
 /* ==== end COMPONENTS ==== */
