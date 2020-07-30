@@ -14,7 +14,17 @@
 		</div>
 
 		<div class="row m-0 p-0 h-auto">
-			
+			<div class="col-sm-12 m-0 p-0">
+				
+			</div>
+
+			<div class="col-sm-12 m-0 p-0">
+				
+			</div>
+		</div>
+
+		<div class="row m-0 p-0 h-auto">
+			footer
 		</div>
 	</div>
 
