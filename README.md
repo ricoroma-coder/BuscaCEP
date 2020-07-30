@@ -61,7 +61,7 @@ Para acesso local, algumas ferramentas são necessárias:
 
 ## Funcionalidades:
 
-- <b>Rotas</b>: Para registrar uma nova rota:
+<h2><b>Rotas</b></h2>: Para registrar uma nova rota:
 	- Abra o arquivo route-list.php em "routes/route-list.php":
 	- Registre uma nova rota como mostrado no arquivo;
 	- Para acessar essa nova rota no navegador localmente, configure a url para:
@@ -69,14 +69,14 @@ Para acesso local, algumas ferramentas são necessárias:
 	- Para acessar essa nova rota no navegador remotamente, configure a url para:
 		> www.domain.com/categorias
 
-- <b>Migrações</b>: Para criar uma nova migração, abra o terminal na pasta principal do projeto e rode o comando:
+<h2><b>Migrações</b></h2>: Para criar uma nova migração, abra o terminal na pasta principal do projeto e rode o comando:
 	> vendor\bin\phinx create MyFirstMigration
 - Para migrar as tabelas para o banco de dados, rode o comando:
 	> vendor\bin\phinx migrate
 - Para dar um rollback, rode o comando:
 	> vendor\bin\phinx rollback
 
-- <b>Seeders</b>: Para criar um novo Seeder, abra o terminal na pasta principal do projeto e rode o comando:
+<h2><b>Seeders</b></h2>: Para criar um novo Seeder, abra o terminal na pasta principal do projeto e rode o comando:
 	> vendor\bin\phinx seed:create MyFirstSeeder
 - Para rodar um Seeder, use o comando:
 	> vendor\bin\phinx seed:run
@@ -128,7 +128,7 @@ Para acesso local, algumas ferramentas são necessárias:
 
 ## Engine
 
-- <b>Routes</b>: To register a new route:
+<h2><b>Routes</b></h2>: To register a new route:
 	- Open the file route-list.php at "routes/route-list.php":
 	- Add a new route following the example in the file;
 	- To reach this page at navigator locally, set url to:
@@ -136,14 +136,14 @@ Para acesso local, algumas ferramentas são necessárias:
 	- To reach this page at navigator remotely, set url to:
 		> www.domain.com/categories
 
-- <b>Migrations</b>: To create a new migration, open the terminal at root directory and run:
+<h2><b>Migrations</b></h2>: To create a new migration, open the terminal at root directory and run:
 	> vendor\bin\phinx create MyFirstMigration
 - Execute migrate by running the command:
 	> vendor\bin\phinx migrate
 - Execute rollback by running the command:
 	> vendor\bin\phinx rollback
 
-- <b>Seeders</b>: To create a new seeder, open the terminal at root directory and run:
+<h2><b>Seeders</b></h2>: To create a new seeder, open the terminal at root directory and run:
 	> vendor\bin\phinx seed:create MyFirstSeeder
 - Execute migrate by running the command:
 	> vendor\bin\phinx seed:run
