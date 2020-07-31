@@ -6,6 +6,27 @@
 </head>
 <body>
 
+	<?php 
+
+		// function getLatLong($address)
+		// {
+			// $address = str_replace(" ", "+", $address);
+			$address = 'Rua+das+Arapongas';
+			$file = "https://maps.google.com/maps/api/geocode/json?address=".$address."&sensor=false&country=Brazil";
+			 
+			$json = file_get_contents($file);
+			$json = json_decode($json);
+
+			var_dump($json);
+			 
+			// $lat = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lat'};
+			// $long = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
+			 
+			// var_dump([$lat,$long]);
+		// }
+
+	?>
+
 	<section id="content">
 		<div class="bg bg-dark"></div>
 
@@ -21,7 +42,7 @@
 				</div>
 
 				<div class="col-sm-12 m-0 p-0">
-					<form class="form-group p-2 row" action="" method="POST">
+					<form id="ajax-form" class="form-group p-2 row" method="POST">
 						<div class="col-sm-4">
 							<label for="cep-input">CEP</label>
 							<input class="form-control" type="text" name="cep" id="cep-input">
