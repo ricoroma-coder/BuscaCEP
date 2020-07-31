@@ -1,5 +1,7 @@
 <header id="menuNavbar" class="row w-100 border-bottom m-0 bg-light">
 	
+	<?php routeIs('/'); ?>
+
 	<div class="col-sm-8 pt-2">
 		<a class="font-lobster font2 menu-link text-dark" href="/">Busca<span style="color: red;">CEP</span></a>
 	</div>

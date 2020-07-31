@@ -54,10 +54,6 @@ function toRoot($relative_url, $path){
 }
 
 function routeIs($path) {
-    if (isset($_GET['uri']) && !empty($_GET['uri']))
-        $uri = '/'.$_GET['uri'];
-    else
-        $uri = '/';
-
-    return $path == $uri;
+    $request = new Request();
+    return $path == $request->base();
 }
