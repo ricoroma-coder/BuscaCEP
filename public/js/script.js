@@ -44,11 +44,23 @@ document.getElementById('ajax-form').addEventListener('submit', function (e) {
 		post.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		post.send();
 		post.onreadystatechange = function() {
+			document.getElementById('error-message').innerHTML = '';
 			if (post.readyState == 4 && post.status == 200) {
-				fillInputs(JSON.parse(post.responseText));
-				var collapse = document.getElementById('collapse-button');
-				if (collapse.getAttribute('class').indexOf('close') > -1)
-					collapse.click();
+				var error = JSON.parse(post.responseText).erro;
+				if (typeof error !== 'undefined') {
+					document.getElementById('error-message').innerHTML = error;
+				}
+				else {
+					fillInputs(JSON.parse(post.responseText));
+					var collapse = document.getElementById('collapse-button');
+					if (collapse.getAttribute('class').indexOf('close') > -1)
+						collapse.click();
+				}
+				document.getElementById('cep-input').value = "";
+				var s = document.querySelectorAll('.search-item');
+				s.forEach(function (k) {
+					document.getElementById('searchContent').removeChild(k); 
+				});
 			}
 		}
 
@@ -56,9 +68,79 @@ document.getElementById('ajax-form').addEventListener('submit', function (e) {
 
 });
 
-function prepareCep(cep) {
+document.getElementById('cep-input').addEventListener('keyup', function () {
+	var t = this;
+
+	if (t.value.length > 0) {
+		var ajax = new XMLHttpRequest(),
+		prepare = prepareCep(t.value, false);
+
+		ajax.open("GET", "/buscacep/ajax/"+prepare, true);
+		ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		ajax.send();
+
+		ajax.onreadystatechange = function() {
+			if (ajax.readyState == 4 && ajax.status == 200) {
+				var data = JSON.parse(ajax.responseText);
+				searchContent.innerHTML = "";
+				data.forEach(function (k) {
+					var searchContent = document.getElementById('searchContent');
+					searchContent.innerHTML+='<div class="search-item text-center" onclick="redirect('+k.id+')">'+
+						'<p class="font3 font-abeezee">'+
+						k.logradouro+
+						'</p>'+
+						'</div>';
+				});
+			}
+		}
+	}
+});
+
+function redirect(id) {
+	var ajax = new XMLHttpRequest();
+
+	ajax.open("GET", "/buscacep/obj/"+id, true);
+		ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		ajax.send();
+
+		ajax.onreadystatechange = function() {
+			if (ajax.readyState == 4 && ajax.status == 200) {
+				fillInputs(JSON.parse(ajax.responseText));
+				var collapse = document.getElementById('collapse-button');
+				if (collapse.getAttribute('class').indexOf('close') > -1)
+					collapse.click();
+				document.getElementById('cep-input').value = "";
+				var s = document.querySelectorAll('.search-item');
+				s.forEach(function (k) {
+					document.getElementById('searchContent').removeChild(k); 
+				});
+			}
+		}
+}
+
+function sumPixels(val1, val2) {
+	val1 = val1.split('p')[0];
+	val2 = val2.split('p')[0];
+
+	val1 += val2;
+
+	return val1+"px";
+}
+
+function subPixels(val1, val2) {
+	val1 = val1.split('p')[0];
+	val2 = val2.split('p')[0];
+
+	val1 -= val2;
+
+	return val1+"px";
+}
+
+function prepareCep(cep, raw = true) {
 	cep = cep.replace(/[^\d]+/g,'') ;
-	if (cep.length == 8)
+	if (!raw)
+		return cep;
+	else if (cep.length == 8)
 		return cep;
 	else
 		return false;

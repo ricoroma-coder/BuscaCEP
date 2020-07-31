@@ -22,11 +22,18 @@
 
 				<div class="col-sm-12 m-0 p-0">
 					<form id="ajax-form" class="form-group p-2 row" method="POST">
-						<div class="col-sm-4">
-							<label for="cep-input">CEP</label>
-							<input class="form-control" type="text" name="cep" id="cep-input">
+						<div class="row col-sm-4 position-relative">
+							<div class="col-sm-12 m-0 p-0">
+								<label for="cep-input">CEP</label>
+							</div>
+							<div class="col-sm-12 m-0 p-0">
+								<input class="form-control" type="text" name="cep" id="cep-input">
+							</div>
+							<div class="col-sm-12 m-0 p-0">
+								<div id="searchContent" class="bg-light border-left border-right border-bottom position-absolute col100"></div>
+							</div>
 						</div>
-						<div class="d-flex flex-column-reverse">
+						<div class="d-flex flex-column-reverse ml-1">
 							<button class="btn btn-primary mt-auto">Buscar</button>
 						</div>
 					</form>
@@ -37,6 +44,11 @@
 
 				<div class="col-sm-12 m-0 p-0 position-relative py-3">
 					<div id="collapse-button" class="cursor-pointer position-absolute rounded-circle close" target="collapse-endereco" style="height: 30px;width: 30px;right:0;top:0;"></div>
+
+					<div class="col100 h-auto">
+						<p id="error-message" class="text-danger font3">
+						</p>
+					</div>
 
 					<div class="form-group p-2 row col100 close collapse-endereco" collapse="collapse-endereco">
 						<div class="col-sm-12 m-0 p-0 pl-3">

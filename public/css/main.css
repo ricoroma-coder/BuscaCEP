@@ -72,6 +72,22 @@
 		display: none;
 	}
 
+	#searchContent {
+		overflow-x: hidden;
+		height: auto;
+		z-index: 10000000000;
+		max-height: 150px;
+		cursor: pointer;
+	}
+
+	#searchContent .search-item {
+		width: 100%;
+		position: relative;
+		height: 50px;
+		white-space: nowrap;
+		border-top: 1px solid gray;
+	}
+
 /* ==== end General ==== */
 
 /* ==== Background ==== */
