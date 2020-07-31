@@ -9,6 +9,8 @@
 	<section id="content">
 		<div class="bg bg-dark"></div>
 
+		<?php require __DIR__.'/components/spining-modal.php'; ?>
+
 		<div class="row m-0 p-0 h-auto">
 			<?php require __DIR__.'/components/navbar.php'; ?>
 		</div>

@@ -75,7 +75,7 @@
 	#searchContent {
 		overflow-x: hidden;
 		height: auto;
-		z-index: 10000000000;
+		z-index: 1000000000;
 		max-height: 150px;
 		cursor: pointer;
 	}
@@ -139,26 +139,24 @@
 
 	/* ==== end #footer ==== */
 
-	/* ==== Map ==== */
+	/* ==== modal ==== */
 
-		#locationMap{
-			background: #fff;
-			border: none;
-			height: 300px;
-			width: 80%;
-			box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			padding: 0;
-			margin: auto;
+		#spiningModal.open {
+			display: block;
 		}
 
-		#map {
-			height: 400px;
-       		width: 100%;
+		#spiningModal.close {
+			display: none;
 		}
 
-	/* ==== end Map ==== */
+		.spining {
+			background-image: url('../images/system-images/spin.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+	/* ==== end modal ==== */
 
 
 /* ==== end COMPONENTS ==== */

@@ -24,7 +24,11 @@ document.getElementById('collapse-button').addEventListener('click', function ()
 document.getElementById('ajax-form').addEventListener('submit', function (e) {
 	e.preventDefault();
 	var t = this,
-	val, prepare;
+	val, prepare,
+	spin = document.getElementById('spiningModal');
+
+	spin.classList.remove('close');
+	spin.classList.add('open');
 
 	if (document.getElementById('cep-input')) {
 		val = document.getElementById('cep-input').value;
@@ -62,6 +66,8 @@ document.getElementById('ajax-form').addEventListener('submit', function (e) {
 					document.getElementById('searchContent').removeChild(k); 
 				});
 			}
+			spin.classList.remove('open');
+			spin.classList.add('close');
 		}
 
 	}
@@ -97,7 +103,11 @@ document.getElementById('cep-input').addEventListener('keyup', function () {
 });
 
 function redirect(id) {
-	var ajax = new XMLHttpRequest();
+	var ajax = new XMLHttpRequest(),
+	spin = document.getElementById('spiningModal');
+
+	spin.classList.remove('close');
+	spin.classList.add('open');
 
 	ajax.open("GET", "/buscacep/obj/"+id, true);
 		ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -115,6 +125,8 @@ function redirect(id) {
 					document.getElementById('searchContent').removeChild(k); 
 				});
 			}
+			spin.classList.remove('open');
+			spin.classList.add('close');
 		}
 }
 
