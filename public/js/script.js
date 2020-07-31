@@ -24,7 +24,6 @@ document.getElementById('collapse-button').addEventListener('click', function ()
 document.getElementById('ajax-form').addEventListener('submit', function (e) {
 	e.preventDefault();
 	var t = this,
-	ajax = new XMLHttpRequest(),
 	val, prepare;
 
 	if (document.getElementById('cep-input')) {
@@ -39,14 +38,17 @@ document.getElementById('ajax-form').addEventListener('submit', function (e) {
 			alert('Digite um endereço válido');
 	}
 	else {
+		var post = new XMLHttpRequest();
 
-		console.log(cep2coo(val));
-		ajax.open("GET", "https://viacep.com.br/ws/"+val+"/xml/", true);
-		ajax.send();
-		ajax.onreadystatechange = function() {
-			if (ajax.readyState == 4 && ajax.status == 200) {
-				var response = ajax.responseXML.getElementsByTagName("xmlcep")[0];
-				// getLatLong(response.getElementsByTagName("logradouro")[0].textContent, response.getElementsByTagName("localidade")[0].textContent)
+		post.open("GET", "/buscacep/"+prepare, true);
+		post.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		post.send();
+		post.onreadystatechange = function() {
+			if (post.readyState == 4 && post.status == 200) {
+				fillInputs(JSON.parse(post.responseText));
+				var collapse = document.getElementById('collapse-button');
+				if (collapse.getAttribute('class').indexOf('close') > -1)
+					collapse.click();
 			}
 		}
 
@@ -62,21 +64,12 @@ function prepareCep(cep) {
 		return false;
 }
 
-function getLatLong(address, uf) {
-	var ajax = new XMLHttpRequest();
-	address = address.replace(' ', '+');
-
-	// ajax.open("GET", "https://www.openstreetmap.org/search?query="+address, true);
-	// ajax.send();
-	// ajax.onreadystatechange = function() {
-	// 	if (ajax.readyState == 4 && ajax.status == 200) {
-	// 		// var response = ajax.responseXML.getElementsByTagName("xmlcep")[0];
-	// 		console.log(ajax.responseXML);
-	// 	}
-	// }
-	 
-// 	$lat = $xml->{'results'}[0]->{'geometry'}->{'location'}->{'lat'};
-// 	$long = $xml->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
-	 
-// 	return array('latitude'=>$lat,'longitude'=>$long);
+function fillInputs(data) {
+	var inputs = document.getElementsByClassName('result');
+	for(var k in inputs) {
+		if (inputs[k] instanceof HTMLElement){
+			var name = inputs[k].getAttribute('name');
+			inputs[k].value = data[name];
+		}
+	}
 }

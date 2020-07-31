@@ -6,27 +6,6 @@
 </head>
 <body>
 
-	<?php 
-
-		// function getLatLong($address)
-		// {
-			// $address = str_replace(" ", "+", $address);
-			$address = 'Rua+das+Arapongas';
-			$file = "https://maps.google.com/maps/api/geocode/json?address=".$address."&sensor=false&country=Brazil";
-			 
-			$json = file_get_contents($file);
-			$json = json_decode($json);
-
-			var_dump($json);
-			 
-			// $lat = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lat'};
-			// $long = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
-			 
-			// var_dump([$lat,$long]);
-		// }
-
-	?>
-
 	<section id="content">
 		<div class="bg bg-dark"></div>
 
@@ -62,28 +41,36 @@
 					<div class="form-group p-2 row col100 close collapse-endereco" collapse="collapse-endereco">
 						<div class="col-sm-12 m-0 p-0 pl-3">
 							<label>Logradouro</label>
-							<input class="form-control" type="text" disabled="true" value="">
+							<input class="form-control result" name="logradouro" type="text" disabled="true" value="">
 						</div>
 
 						<div class="row col-sm-12 m-0 p-0">
-							<div class="col-sm-4 pr-0">
-								<label>Número</label>
-								<input class="form-control" type="text" disabled="true" value="">
-							</div>
-							<div class="col-sm-8 pr-0">
+							<div class="col-sm-7 pr-0">
 								<label>Bairro</label>
-								<input class="form-control" type="text" disabled="true" value="">
+								<input class="form-control result" name="bairro" type="text" disabled="true" value="">
+							</div>
+							<div class="col-sm-5 pr-0">
+								<label>Localidade</label>
+								<input class="form-control result" name="localidade" type="text" disabled="true" value="">
 							</div>
 						</div>
 
 						<div class="row col-sm-12 m-0 p-0">
-							<div class="col-sm-4 pr-0">
-								<label>Cidade</label>
-								<input class="form-control" type="text" disabled="true" value="">
-							</div>
-							<div class="col-sm-8 pr-0">
+							<div class="col-sm-2 pr-0">
 								<label>UF</label>
-								<input class="form-control" type="text" disabled="true" value="">
+								<input class="form-control result" name="uf" type="text" disabled="true" value="">
+							</div>
+							<div class="col-sm-3 pr-0">
+								<label>Unidade</label>
+								<input class="form-control result" name="unidade"  type="text" disabled="true" value="">
+							</div>
+							<div class="col-sm-3 pr-0">
+								<label>GIA</label>
+								<input class="form-control result" name="gia"  type="text" disabled="true" value="">
+							</div>
+							<div class="col-sm-4 pr-0">
+								<label>IBGE</label>
+								<input class="form-control result" name="ibge"  type="text" disabled="true" value="">
 							</div>
 						</div>
 

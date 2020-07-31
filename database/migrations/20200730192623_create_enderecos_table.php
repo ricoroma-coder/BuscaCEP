@@ -50,6 +50,9 @@ final class CreateEnderecosTable extends AbstractMigration
             ->addColumn('created_at', 'datetime',[
                 'default' => 'CURRENT_TIMESTAMP'
             ])
+            ->addColumn('updated_at', 'datetime',[
+                'default' => 'CURRENT_TIMESTAMP'
+            ])
             ->create();
     }
 }
